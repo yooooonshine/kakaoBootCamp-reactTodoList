@@ -1,5 +1,10 @@
-export default function TodoItem() {
+export default function TodoItem({id, clickDelete, clickCheckbox, text}) {
+
     return (
-        <li></li>
+        <li>
+            <input type="checkbox" onClick={() => clickCheckbox(id)}/>
+            {text}
+            <button onClick={() => clickDelete(id)} type="button">삭제</button>
+        </li>
     );
 };
