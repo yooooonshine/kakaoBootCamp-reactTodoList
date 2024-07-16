@@ -6,7 +6,6 @@ export default function TodoList() {
     const [todos, setTodos] = useState([]);
 
     const addTodo = (text) => {
-        console.log(text);
         const end = false;
 
         setTodos([...todos, new Todo(text, end)])
@@ -39,7 +38,7 @@ export default function TodoList() {
             <TodoInput addTodo={addTodo}></TodoInput>
 
             <ol id="toDoList">
-                {todos.map(todo => <TodoItem key={todo.id} id={todo.id} clickDelete={deleteTodo} clickCheckbox={finishTodo} text={todo.text}></TodoItem>)}
+                {todos.map(todo => <TodoItem key={todo.id} id={todo.id} clickDelete={deleteTodo} clickCheckbox={finishTodo} text={todo.text} end={todo.end}></TodoItem>)}
             </ol>
         </section>
     );

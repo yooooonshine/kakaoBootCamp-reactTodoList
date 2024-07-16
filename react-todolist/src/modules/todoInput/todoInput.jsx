@@ -5,7 +5,6 @@ export default function TodoInput({addTodo}) {
     const [text, setText] = useState();
 
     function handleTextChange(e) {
-        console.log(e.target.value);
         setText(e.target.value);
     }
 
