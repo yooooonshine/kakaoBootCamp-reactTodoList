@@ -1,0 +1,12 @@
+#todoItem {
+    border-bottom: 1px solid lightgrey;
+    text-align: left;
+}
+
+.todoText {
+    text-decoration-line: initial;
+}
+
+.todoTextEnd {
+    text-decoration-line: line-through;
+}

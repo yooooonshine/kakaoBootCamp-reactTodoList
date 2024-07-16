@@ -1,9 +1,11 @@
-export default function TodoItem({id, clickDelete, clickCheckbox, text}) {
+import "./todoItem.css"
+
+export default function TodoItem({id, clickDelete, clickCheckbox, text, end}) {
 
     return (
-        <li>
+        <li id="todoItem">
             <input type="checkbox" onClick={() => clickCheckbox(id)}/>
-            {text}
+            <span className= {end ? "todoTextEnd" : "todoText"}>{text}</span>
             <button onClick={() => clickDelete(id)} type="button">삭제</button>
         </li>
     );
